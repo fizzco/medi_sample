@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0892A3015FB0574005809DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A2F15FB0574005809DA /* UIKit.framework */; };
+		D0892A3215FB0574005809DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A3115FB0574005809DA /* Foundation.framework */; };
+		D0892A3415FB0574005809DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A3315FB0574005809DA /* CoreGraphics.framework */; };
+		D0892A3A15FB0574005809DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0892A3815FB0574005809DA /* InfoPlist.strings */; };
+		D0892A3C15FB0574005809DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A3B15FB0574005809DA /* main.m */; };
+		D0892A4015FB0574005809DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A3F15FB0574005809DA /* AppDelegate.m */; };
+		D0892A4315FB0574005809DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A4215FB0574005809DA /* ViewController.m */; };
+		D0892A4615FB0574005809DA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0892A4415FB0574005809DA /* ViewController.xib */; };
+		D0892A4D15FB05A8005809DA /* icon@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0892A4C15FB05A8005809DA /* icon@x2.png */; };
+		D0892A5115FB05BB005809DA /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A4F15FB05BB005809DA /* libNendAd.a */; };
+		D0892A6515FB05D0005809DA /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A5C15FB05D0005809DA /* libGoogleAdMobAds.a */; };
+		D0892A6615FB05D0005809DA /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0892A6415FB05D0005809DA /* README.txt */; };
+		D0892A6815FB0AF5005809DA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A6715FB0AF5005809DA /* AudioToolbox.framework */; };
+		D0892A6A15FB0B06005809DA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A6915FB0B06005809DA /* MessageUI.framework */; };
+		D0892A6C15FB0B0F005809DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A6B15FB0B0F005809DA /* SystemConfiguration.framework */; };
+		D0892A6E15FB0B1A005809DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A6D15FB0B1A005809DA /* CoreLocation.framework */; };
+		D0892A7515FB0B8B005809DA /* NendEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A7215FB0B8B005809DA /* NendEventBanner.m */; };
+		D0892A7615FB0B8B005809DA /* AppbankEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A7415FB0B8B005809DA /* AppbankEventBanner.m */; };
+		D0892A7815FB0BBE005809DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A7715FB0BBE005809DA /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0892A2B15FB0574005809DA /* medi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0892A2F15FB0574005809DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0892A3115FB0574005809DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0892A3315FB0574005809DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0892A3715FB0574005809DA /* medi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "medi-Info.plist"; sourceTree = "<group>"; };
+		D0892A3915FB0574005809DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0892A3B15FB0574005809DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0892A3D15FB0574005809DA /* medi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "medi-Prefix.pch"; sourceTree = "<group>"; };
+		D0892A3E15FB0574005809DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0892A3F15FB0574005809DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0892A4115FB0574005809DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0892A4215FB0574005809DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0892A4515FB0574005809DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		D0892A4C15FB05A8005809DA /* icon@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@x2.png"; sourceTree = "<group>"; };
+		D0892A4F15FB05BB005809DA /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
+		D0892A5015FB05BB005809DA /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
+		D0892A5315FB05D0005809DA /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		D0892A5415FB05D0005809DA /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		D0892A5515FB05D0005809DA /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		D0892A5615FB05D0005809DA /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		D0892A5715FB05D0005809DA /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		D0892A5815FB05D0005809DA /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		D0892A5915FB05D0005809DA /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		D0892A5A15FB05D0005809DA /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		D0892A5B15FB05D0005809DA /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		D0892A5C15FB05D0005809DA /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		D0892A5E15FB05D0005809DA /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		D0892A5F15FB05D0005809DA /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		D0892A6015FB05D0005809DA /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		D0892A6115FB05D0005809DA /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		D0892A6215FB05D0005809DA /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		D0892A6315FB05D0005809DA /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
+		D0892A6415FB05D0005809DA /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D0892A6715FB0AF5005809DA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D0892A6915FB0B06005809DA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D0892A6B15FB0B0F005809DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D0892A6D15FB0B1A005809DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D0892A7115FB0B8B005809DA /* NendEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NendEventBanner.h; sourceTree = "<group>"; };
+		D0892A7215FB0B8B005809DA /* NendEventBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NendEventBanner.m; sourceTree = "<group>"; };
+		D0892A7315FB0B8B005809DA /* AppbankEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppbankEventBanner.h; sourceTree = "<group>"; };
+		D0892A7415FB0B8B005809DA /* AppbankEventBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppbankEventBanner.m; sourceTree = "<group>"; };
+		D0892A7715FB0BBE005809DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D0892A7815FB0BBE005809DB /* CustomEventConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEventConst.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0892A2815FB0574005809DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0892A7815FB0BBE005809DA /* Security.framework in Frameworks */,
+				D0892A6E15FB0B1A005809DA /* CoreLocation.framework in Frameworks */,
+				D0892A6C15FB0B0F005809DA /* SystemConfiguration.framework in Frameworks */,
+				D0892A6A15FB0B06005809DA /* MessageUI.framework in Frameworks */,
+				D0892A6815FB0AF5005809DA /* AudioToolbox.framework in Frameworks */,
+				D0892A3015FB0574005809DA /* UIKit.framework in Frameworks */,
+				D0892A3215FB0574005809DA /* Foundation.framework in Frameworks */,
+				D0892A3415FB0574005809DA /* CoreGraphics.framework in Frameworks */,
+				D0892A5115FB05BB005809DA /* libNendAd.a in Frameworks */,
+				D0892A6515FB05D0005809DA /* libGoogleAdMobAds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0892A2015FB0573005809DA = {
+			isa = PBXGroup;
+			children = (
+				D0892A7715FB0BBE005809DA /* Security.framework */,
+				D0892A6D15FB0B1A005809DA /* CoreLocation.framework */,
+				D0892A6B15FB0B0F005809DA /* SystemConfiguration.framework */,
+				D0892A6915FB0B06005809DA /* MessageUI.framework */,
+				D0892A6715FB0AF5005809DA /* AudioToolbox.framework */,
+				D0892A6F15FB0B8B005809DA /* CustomEventBanner */,
+				D0892A5215FB05D0005809DA /* GoogleAdMobAdsSDK */,
+				D0892A4E15FB05BB005809DA /* NendAd */,
+				D0892A4C15FB05A8005809DA /* icon@x2.png */,
+				D0892A3515FB0574005809DA /* medi */,
+				D0892A2E15FB0574005809DA /* Frameworks */,
+				D0892A2C15FB0574005809DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0892A2C15FB0574005809DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A2B15FB0574005809DA /* medi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0892A2E15FB0574005809DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A2F15FB0574005809DA /* UIKit.framework */,
+				D0892A3115FB0574005809DA /* Foundation.framework */,
+				D0892A3315FB0574005809DA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0892A3515FB0574005809DA /* medi */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A3E15FB0574005809DA /* AppDelegate.h */,
+				D0892A3F15FB0574005809DA /* AppDelegate.m */,
+				D0892A4115FB0574005809DA /* ViewController.h */,
+				D0892A4215FB0574005809DA /* ViewController.m */,
+				D0892A4415FB0574005809DA /* ViewController.xib */,
+				D0892A3615FB0574005809DA /* Supporting Files */,
+			);
+			path = medi;
+			sourceTree = "<group>";
+		};
+		D0892A3615FB0574005809DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A3715FB0574005809DA /* medi-Info.plist */,
+				D0892A3815FB0574005809DA /* InfoPlist.strings */,
+				D0892A3B15FB0574005809DA /* main.m */,
+				D0892A3D15FB0574005809DA /* medi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0892A4E15FB05BB005809DA /* NendAd */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A4F15FB05BB005809DA /* libNendAd.a */,
+				D0892A5015FB05BB005809DA /* NADView.h */,
+			);
+			path = NendAd;
+			sourceTree = "<group>";
+		};
+		D0892A5215FB05D0005809DA /* GoogleAdMobAdsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A5315FB05D0005809DA /* GADAdMobExtras.h */,
+				D0892A5415FB05D0005809DA /* GADAdNetworkExtras.h */,
+				D0892A5515FB05D0005809DA /* GADAdSize.h */,
+				D0892A5615FB05D0005809DA /* GADBannerView.h */,
+				D0892A5715FB05D0005809DA /* GADBannerViewDelegate.h */,
+				D0892A5815FB05D0005809DA /* GADInterstitial.h */,
+				D0892A5915FB05D0005809DA /* GADInterstitialDelegate.h */,
+				D0892A5A15FB05D0005809DA /* GADRequest.h */,
+				D0892A5B15FB05D0005809DA /* GADRequestError.h */,
+				D0892A5C15FB05D0005809DA /* libGoogleAdMobAds.a */,
+				D0892A5D15FB05D0005809DA /* Mediation */,
+				D0892A6415FB05D0005809DA /* README.txt */,
+			);
+			path = GoogleAdMobAdsSDK;
+			sourceTree = "<group>";
+		};
+		D0892A5D15FB05D0005809DA /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A5E15FB05D0005809DA /* GADCustomEventBanner.h */,
+				D0892A5F15FB05D0005809DA /* GADCustomEventBannerDelegate.h */,
+				D0892A6015FB05D0005809DA /* GADCustomEventExtras.h */,
+				D0892A6115FB05D0005809DA /* GADCustomEventInterstitial.h */,
+				D0892A6215FB05D0005809DA /* GADCustomEventInterstitialDelegate.h */,
+				D0892A6315FB05D0005809DA /* GADCustomEventRequest.h */,
+			);
+			path = Mediation;
+			sourceTree = "<group>";
+		};
+		D0892A6F15FB0B8B005809DA /* CustomEventBanner */ = {
+			isa = PBXGroup;
+			children = (
+				D0892A7815FB0BBE005809DB /* CustomEventConst.h */,
+				D0892A7115FB0B8B005809DA /* NendEventBanner.h */,
+				D0892A7215FB0B8B005809DA /* NendEventBanner.m */,
+				D0892A7315FB0B8B005809DA /* AppbankEventBanner.h */,
+				D0892A7415FB0B8B005809DA /* AppbankEventBanner.m */,
+			);
+			path = CustomEventBanner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0892A2A15FB0574005809DA /* medi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0892A4915FB0574005809DA /* Build configuration list for PBXNativeTarget "medi" */;
+			buildPhases = (
+				D0892A2715FB0574005809DA /* Sources */,
+				D0892A2815FB0574005809DA /* Frameworks */,
+				D0892A2915FB0574005809DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = medi;
+			productName = medi;
+			productReference = D0892A2B15FB0574005809DA /* medi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0892A2215FB0573005809DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = D0892A2515FB0573005809DA /* Build configuration list for PBXProject "medi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0892A2015FB0573005809DA;
+			productRefGroup = D0892A2C15FB0574005809DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0892A2A15FB0574005809DA /* medi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0892A2915FB0574005809DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0892A3A15FB0574005809DA /* InfoPlist.strings in Resources */,
+				D0892A4615FB0574005809DA /* ViewController.xib in Resources */,
+				D0892A4D15FB05A8005809DA /* icon@x2.png in Resources */,
+				D0892A6615FB05D0005809DA /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0892A2715FB0574005809DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0892A3C15FB0574005809DA /* main.m in Sources */,
+				D0892A4015FB0574005809DA /* AppDelegate.m in Sources */,
+				D0892A4315FB0574005809DA /* ViewController.m in Sources */,
+				D0892A7515FB0B8B005809DA /* NendEventBanner.m in Sources */,
+				D0892A7615FB0B8B005809DA /* AppbankEventBanner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0892A3815FB0574005809DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0892A3915FB0574005809DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0892A4415FB0574005809DA /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0892A4515FB0574005809DA /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0892A4715FB0574005809DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0892A4815FB0574005809DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0892A4A15FB0574005809DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "medi/medi-Prefix.pch";
+				INFOPLIST_FILE = "medi/medi-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NendAd\"",
+					"\"$(SRCROOT)/GoogleAdMobAdsSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0892A4B15FB0574005809DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "medi/medi-Prefix.pch";
+				INFOPLIST_FILE = "medi/medi-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NendAd\"",
+					"\"$(SRCROOT)/GoogleAdMobAdsSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0892A2515FB0573005809DA /* Build configuration list for PBXProject "medi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0892A4715FB0574005809DA /* Debug */,
+				D0892A4815FB0574005809DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0892A4915FB0574005809DA /* Build configuration list for PBXNativeTarget "medi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0892A4A15FB0574005809DA /* Debug */,
+				D0892A4B15FB0574005809DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0892A2215FB0573005809DA /* Project object */;
+}
