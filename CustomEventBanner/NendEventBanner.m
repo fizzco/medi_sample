@@ -9,72 +9,72 @@
 #import "NendEventBanner.h"
 #import "CustomEventConst.h"
 
-@interface NendEventBanner(){
-    NADView *nendView_;
-}
+@interface NendEventBanner(){}
+@property (nonatomic,retain) NADView * nendView;
 @end
 @implementation NendEventBanner
-@synthesize delegate = delegate_;
 
-#pragma mark -
-#pragma requestBannerAd
+#pragma mark - requestBannerAd
 -(void)requestBannerAd:(GADAdSize)adSize
              parameter:(NSString *)serverParameter
                  label:(NSString *)serverLabel
                request:(GADCustomEventRequest *)request {
-
-    // nend
-    NSLog(@"++ nendEventBanner request banner ad");
-    if(!nendView_){
-        nendView_ = [[NADView alloc]initWithFrame:CGRectMake(0, 0, adSize.size.width, adSize.size.height)];   
+    
+    // 例えば@"APIKey,SpotID"の形式でParameter指定した場合
+    NSArray * idArray = [serverParameter componentsSeparatedByString:@","];
+    NSLog(@"NendEventBanner parameter IDs count:%d", idArray.count);
+    
+    if(idArray.count != 2){
+        // 失敗扱いにしておく
+        [self.delegate customEventBanner:self didFailAd:nil];
     }
-    [nendView_ setDelegate:self];
-    [nendView_ setNendID:NEND_API_KEY spotID:NEND_SPOT_ID];
-    // nilでも構わないが、NSLogで警告が出るので空のインスタンスを渡す
-    [nendView_ setRootViewController:([[UIViewController alloc]init])];
-    // リクエストを開始
-    [nendView_ load];
+    
+    // Nend
+    NSLog(@"++ Nend request banner ad");
+    if(!self.nendView){
+        self.nendView = [[NADView alloc]initWithFrame:CGRectMake(0, 0, adSize.size.width, adSize.size.height)];
+    }
+    //    [nendView setIsOutputLog:YES];
+    [self.nendView setDelegate:self];
+    [self.nendView setNendID:idArray[0] spotID:idArray[1]];
+    [self.nendView load];
 }
 
-#pragma mark -
-#pragma mark NADView delegate
+#pragma mark - NADView delegate
 - (void)nadViewDidFinishLoad:(NADView *)adView {
-    NSLog(@"nendEventBanner nadViewDidFinishLoad");
+    NSLog(@"NendEventBanner nadViewDidFinishLoad");
 }
-
 #pragma mark - Success
 - (void)nadViewDidReceiveAd:(NADView *)adView {
-    NSLog(@"nendEventBanner nadViewDidReceiveAd start");
-
-    NSLog(@"adView pause");
+    NSLog(@"NendEventBanner nadViewDidReceiveAd");
+    
+    // 広告受信成功をmediationへ通知
     [adView pause];
     [self.delegate customEventBanner:self didReceiveAd:adView];
-//    //switch test
-//    [adView pause];
-//    [self.delegate customEventBanner:self didFailAd:nil];
 }
-
 #pragma mark - Error
 - (void)nadViewDidFailToReceiveAd:(NADView *)adView {
-    NSLog(@"nendEventBanner nadViewDidFailToReceiveAd");
-
-    // 無駄なリクエストを発行しないように止めておく
+    NSLog(@"NendEventBanner nadViewDidFailToReceiveAd");
+    
+    // 広告取得失敗をmediationへ通知
     [adView pause];
-    NSLog(@"adView pause");
-
-    // mediationへ受信失敗を通知
-    [self.delegate customEventBanner:self didFailAd:nil];
-
-    //didFailAd:で渡すNSErrorは任意なので、対応していない広告の場合はnilでok
+    [self.delegate customEventBanner:self didFailAd:adView.error];
+}
+#pragma mark - Click
+-(void)nadViewDidClickAd:(NADView *)adView {
+    NSLog(@"NendEventBanner nadViewDidClickAd");
+    
+    // Clickを通知
+    [self.delegate customEventBanner:self clickDidOccurInAd:adView];
 }
 
-#pragma mark -
-#pragma mark life cycle
+#pragma mark - CustomEventBanner life cycle
 -(void)dealloc {
-    NSLog(@"-- nendEventBanner dealloc");
-    [nendView_ pause];
-    nendView_.delegate = nil;
-    nendView_ = nil;
-    self.delegate =nil;
+    NSLog(@"-- NendEventBanner dealloc");
+    
+    [self.nendView setDelegate:nil];
+    [self setNendView:nil];
+    [self setDelegate:nil];
 }
+
 @end

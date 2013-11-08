@@ -7,71 +7,73 @@
 //
 
 #import "AppbankEventBanner.h"
-#import "CustomEventConst.h"
 
-@interface AppbankEventBanner (){
-    NADView *appbankView_;
-    UIViewController * viewController_;
-}
+@interface AppbankEventBanner (){}
+@property (nonatomic,retain) NADView * appbankView;
 @end
 @implementation AppbankEventBanner
-@synthesize delegate = delegate_;
 
-
-#pragma mark -
-#pragma requestBannerAd
+#pragma mark - requestBannerAd
 -(void)requestBannerAd:(GADAdSize)adSize
              parameter:(NSString *)serverParameter
                  label:(NSString *)serverLabel
                request:(GADCustomEventRequest *)request {
     
-    // AppBank
-    NSLog(@"++ Appbank request banner ad");
-    if(!appbankView_){
-        appbankView_ = [[NADView alloc]initWithFrame:CGRectMake(0, 0, adSize.size.width, adSize.size.height)];
+    // 例えば@"APIKey,SpotID"の形式でParameter指定した場合
+    NSArray * idArray = [serverParameter componentsSeparatedByString:@","];
+    NSLog(@"AppBank Network IDs count:%d", idArray.count);
+    
+    if(idArray.count != 2){
+        // 失敗扱いにしておく
+        [self.delegate customEventBanner:self didFailAd:nil];
     }
-    [appbankView_ setDelegate:self];
-    [appbankView_ setNendID:APPBANK_API_KEY spotID:APPBANK_SPOT_ID];
-    [appbankView_ setRootViewController:([[UIViewController alloc]init])];
-    [appbankView_ load];
+    
+    // AppBank Network
+    NSLog(@"++ Appbank request banner ad");
+    if(!self.appbankView){
+        self.appbankView = [[NADView alloc]initWithFrame:CGRectMake(0, 0, adSize.size.width, adSize.size.height)];
+    }
+//    [self.appbankView setIsOutputLog:YES];
+    [self.appbankView setDelegate:self];
+    [self.appbankView setNendID:idArray[0] spotID:idArray[1]];
+    [self.appbankView load];
 }
 
-#pragma mark -
-#pragma mark NADView delegate
+#pragma mark - NADView delegate
 - (void)nadViewDidFinishLoad:(NADView *)adView {
     NSLog(@"AppbankEventBanner nadViewDidFinishLoad");
 }
-
 #pragma mark - Success
 - (void)nadViewDidReceiveAd:(NADView *)adView {
     NSLog(@"AppbankEventBanner nadViewDidReceiveAd");
     
-    [adView pause];
-    NSLog(@"adView pause");
-    
     // 広告受信成功をmediationへ通知
+    [adView pause];
     [self.delegate customEventBanner:self didReceiveAd:adView];
 }
 #pragma mark - Error
 - (void)nadViewDidFailToReceiveAd:(NADView *)adView {
     NSLog(@"AppbankEventBanner nadViewDidFailToReceiveAd");
 
-    [adView pause];
-    NSLog(@"adView pause");
-    
     // 広告取得失敗をmediationへ通知
-    [self.delegate customEventBanner:self didFailAd:nil];
+    [adView pause];
+    [self.delegate customEventBanner:self didFailAd:adView.error];
+}
+#pragma mark - Click
+-(void)nadViewDidClickAd:(NADView *)adView {
+    NSLog(@"AppbankEventBanner nadViewDidClickAd");
+    
+    // Clickを通知
+    [self.delegate customEventBanner:self clickDidOccurInAd:adView];
 }
 
-#pragma mark -
-#pragma mark life cycle
+#pragma mark - CustomEventBanner life cycle
 -(void)dealloc {
     NSLog(@"-- AppbankEventBanner dealloc");
-    [appbankView_ pause];
-    appbankView_.delegate = nil;
-    appbankView_ = nil;
-    self.delegate =nil;
+    
+    [self.appbankView setDelegate:nil];
+    [self setAppbankView:nil];
+    [self setDelegate:nil];
 }
-
 
 @end

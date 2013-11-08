@@ -22,12 +22,13 @@ GADBannerView * bannerView_;
 
     // ----- admob mediation -----
 
-    // 320*50のバナー広告としてGADBannerViewインスタンスを生成
+    // 320*50のバナー広告としてGADBannerViewインスタンスを生成する例
     bannerView_ = [[GADBannerView alloc]initWithAdSize:kGADAdSizeBanner];
+    [bannerView_ setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
 
-    // admob PublisherIDでなくmediationIDを設定
-    bannerView_.adUnitID = @"YourMediationID";
-    bannerView_.rootViewController = self;
+    // AdMobの広告ユニットIDを設定
+    [bannerView_ setAdUnitID:@"Set Your AdUnitID !"];
+    [bannerView_ setRootViewController:self];
     [bannerView_ setDelegate:self];
     [self.view addSubview:bannerView_];
 
@@ -49,21 +50,25 @@ GADBannerView * bannerView_;
  #pragma mark
  -(void)dealloc {
      NSLog(@"dealloc");
-     bannerView_.rootViewController = nil;
-     bannerView_.delegate = nil;
+     [bannerView_ setRootViewController:nil];
+     [bannerView_ setDelegate:nil];
      bannerView_ = nil;
 
  }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // １．画面上部
+//    [bannerView_ setFrame:CGRectMake((self.view.frame.size.width - bannerView_.frame.size.width) /2, 0, bannerView_.frame.size.width, bannerView_.frame.size.height)];
+    // ２．画面下部
+    [bannerView_ setFrame:CGRectMake((self.view.frame.size.width - bannerView_.frame.size.width) /2, self.view.frame.size.height - bannerView_.frame.size.height, bannerView_.frame.size.width, bannerView_.frame.size.height)];
+}
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end

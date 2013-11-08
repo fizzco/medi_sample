@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D075522E182C5383001065C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D075522D182C5383001065C7 /* Default-568h@2x.png */; };
+		D0755230182C59D3001065C7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D075522F182C59D3001065C7 /* AVFoundation.framework */; };
+		D0755232182C59F4001065C7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0755231182C59F4001065C7 /* StoreKit.framework */; };
 		D0892A3015FB0574005809DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A2F15FB0574005809DA /* UIKit.framework */; };
 		D0892A3215FB0574005809DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A3115FB0574005809DA /* Foundation.framework */; };
 		D0892A3415FB0574005809DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A3315FB0574005809DA /* CoreGraphics.framework */; };
@@ -26,9 +29,13 @@
 		D0892A7515FB0B8B005809DA /* NendEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A7215FB0B8B005809DA /* NendEventBanner.m */; };
 		D0892A7615FB0B8B005809DA /* AppbankEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D0892A7415FB0B8B005809DA /* AppbankEventBanner.m */; };
 		D0892A7815FB0BBE005809DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0892A7715FB0BBE005809DA /* Security.framework */; };
+		D0C5E3A4182BD09B003ABA73 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C5E3A3182BD09B003ABA73 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D075522D182C5383001065C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D075522F182C59D3001065C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0755231182C59F4001065C7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D0892A2B15FB0574005809DA /* medi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0892A2F15FB0574005809DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0892A3115FB0574005809DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,7 +78,7 @@
 		D0892A7315FB0B8B005809DA /* AppbankEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppbankEventBanner.h; sourceTree = "<group>"; };
 		D0892A7415FB0B8B005809DA /* AppbankEventBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppbankEventBanner.m; sourceTree = "<group>"; };
 		D0892A7715FB0BBE005809DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D0892A7815FB0BBE005809DB /* CustomEventConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEventConst.h; sourceTree = "<group>"; };
+		D0C5E3A3182BD09B003ABA73 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0755232182C59F4001065C7 /* StoreKit.framework in Frameworks */,
+				D0755230182C59D3001065C7 /* AVFoundation.framework in Frameworks */,
+				D0C5E3A4182BD09B003ABA73 /* AdSupport.framework in Frameworks */,
 				D0892A7815FB0BBE005809DA /* Security.framework in Frameworks */,
 				D0892A6E15FB0B1A005809DA /* CoreLocation.framework in Frameworks */,
 				D0892A6C15FB0B0F005809DA /* SystemConfiguration.framework in Frameworks */,
@@ -98,6 +108,10 @@
 		D0892A2015FB0573005809DA = {
 			isa = PBXGroup;
 			children = (
+				D0755231182C59F4001065C7 /* StoreKit.framework */,
+				D075522F182C59D3001065C7 /* AVFoundation.framework */,
+				D075522D182C5383001065C7 /* Default-568h@2x.png */,
+				D0C5E3A3182BD09B003ABA73 /* AdSupport.framework */,
 				D0892A7715FB0BBE005809DA /* Security.framework */,
 				D0892A6D15FB0B1A005809DA /* CoreLocation.framework */,
 				D0892A6B15FB0B0F005809DA /* SystemConfiguration.framework */,
@@ -199,7 +213,6 @@
 		D0892A6F15FB0B8B005809DA /* CustomEventBanner */ = {
 			isa = PBXGroup;
 			children = (
-				D0892A7815FB0BBE005809DB /* CustomEventConst.h */,
 				D0892A7115FB0B8B005809DA /* NendEventBanner.h */,
 				D0892A7215FB0B8B005809DA /* NendEventBanner.m */,
 				D0892A7315FB0B8B005809DA /* AppbankEventBanner.h */,
@@ -262,6 +275,7 @@
 				D0892A4615FB0574005809DA /* ViewController.xib in Resources */,
 				D0892A4D15FB05A8005809DA /* icon@x2.png in Resources */,
 				D0892A6615FB05D0005809DA /* README.txt in Resources */,
+				D075522E182C5383001065C7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +420,7 @@
 				D0892A4B15FB0574005809DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
